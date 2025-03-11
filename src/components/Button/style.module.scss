@@ -1,0 +1,102 @@
+.button {
+  --variant-textColor: #1976d2;
+  --variant-outlinedColor: #1976d2;
+  --variant-outlinedBorder: rgba(25, 118, 210, 0.5);
+  --variant-containedColor: #fff;
+  --variant-containedBg: #1976d2;
+
+  padding: 6px 16px;
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-width: 64px;
+
+  background-color: transparent;
+  outline: 0;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.75;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 4px;
+  color: var(--variant-containedColor);
+  background-color: var(--variant-containedBg);
+  box-shadow:
+    0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  transition:
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
+  &_text {
+    color: var(--variant-textColor);
+    background-color: var(--variant-textBg);
+    box-shadow: none;
+
+    &:disabled {
+      color: rgba(0, 0, 0, 0.26);
+    }
+  }
+
+  &_outline {
+    padding: 5px 15px;
+    border: 1px solid currentColor;
+    box-shadow: none;
+    border-color: var(--variant-outlinedBorder, currentColor);
+    background-color: var(--variant-outlinedBg);
+    color: var(--variant-outlinedColor);
+
+    &:disabled {
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      color: rgba(0, 0, 0, 0.26);
+    }
+  }
+
+  &_small {
+    padding: 4px 10px;
+    font-size: 0.8125rem;
+  }
+
+  &_large {
+    padding: 8px 22px;
+    font-size: 0.9375rem;
+  }
+
+  &:disabled {
+    box-shadow: none;
+    pointer-events: none;
+    cursor: default;
+  }
+
+  &:hover {
+    --variant-containedBg: #1565c0;
+    --variant-textBg: rgba(25, 118, 210, 0.04);
+    --variant-outlinedBorder: #1976d2;
+    --variant-outlinedBg: rgba(25, 118, 210, 0.04);
+  }
+
+  &:not(&_outline, &_text) {
+    &:active {
+      box-shadow:
+        0px 5px 5px -3px rgba(0, 0, 0, 0.2),
+        0px 8px 10px 1px rgba(0, 0, 0, 0.14),
+        0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+    }
+
+    &:disabled {
+      color: rgba(0, 0, 0, 0.26);
+      background-color: rgba(0, 0, 0, 0.12);
+    }
+  }
+}
