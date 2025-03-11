@@ -1,4 +1,5 @@
 import ReactRefreshTypeScript from 'react-refresh-typescript';
+import autoprefixer from 'autoprefixer';
 import { ModuleOptions } from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { BuildOptions } from './types/types';
@@ -38,12 +39,9 @@ export function buildLoaders(options: BuildOptions): ModuleOptions['rules'] {
   };
 
   const scssLoader = {
-    // test: /\.module\.scss$/,
     test: /\.s[ac]ss$/i,
     use: [
-      // Creates `style` nodes from JS strings
       isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
-      // Translates CSS into CommonJS
       {
         loader: 'css-loader',
         options: {
@@ -52,7 +50,14 @@ export function buildLoaders(options: BuildOptions): ModuleOptions['rules'] {
           },
         },
       },
-      // Compiles Sass to CSS
+      {
+        loader: 'postcss-loader',
+        options: {
+          postcssOptions: {
+            plugins: [autoprefixer()],
+          },
+        },
+      },
       'sass-loader',
     ],
   };
