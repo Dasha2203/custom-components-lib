@@ -8,12 +8,14 @@ const Button = ({
   children,
   variant = 'contained',
   size = 'medium',
+  color = 'primary',
   ...props
 }: ButtonProps) => {
   const className = clsx(
     classes.button,
     classes[`button_${variant}`],
     classes[`button_${size}`],
+    classes[`button_${color}`],
     props.className
   );
 
