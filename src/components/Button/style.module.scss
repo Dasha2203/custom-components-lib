@@ -1,9 +1,35 @@
 .button {
-  --variant-textColor: #1976d2;
-  --variant-outlinedColor: #1976d2;
-  --variant-outlinedBorder: rgba(25, 118, 210, 0.5);
-  --variant-containedColor: #fff;
-  --variant-containedBg: #1976d2;
+  &_primary {
+    --variant-textColor: #1976d2;
+    --variant-outlinedColor: #1976d2;
+    --variant-outlinedBorder: rgba(25, 118, 210, 0.5);
+    --variant-containedColor: #fff;
+    --variant-containedBg: #1976d2;
+  }
+
+  &_secondary {
+    --variant-textColor: #9c27b0;
+    --variant-outlinedColor: #9c27b0;
+    --variant-outlinedBorder: rgba(156, 39, 176, 0.5);
+    --variant-containedColor: #fff;
+    --variant-containedBg: #9c27b0;
+  }
+
+  &_success {
+    --variant-textColor: #2e7d32;
+    --variant-outlinedColor: #2e7d32;
+    --variant-outlinedBorder: rgba(46, 125, 50, 0.5);
+    --variant-containedColor: #fff;
+    --variant-containedBg: #2e7d32;
+  }
+
+  &_error {
+    --variant-textColor: #d32f2f;
+    --variant-outlinedColor: #d32f2f;
+    --variant-outlinedBorder: rgba(211, 47, 47, 0.5);
+    --variant-containedColor: #fff;
+    --variant-containedBg: #d32f2f;
+  }
 
   padding: 6px 16px;
 
@@ -49,7 +75,7 @@
     }
   }
 
-  &_outline {
+  &_outlined {
     padding: 5px 15px;
     border: 1px solid currentColor;
     box-shadow: none;
@@ -80,13 +106,33 @@
   }
 
   &:hover {
-    --variant-containedBg: #1565c0;
-    --variant-textBg: rgba(25, 118, 210, 0.04);
-    --variant-outlinedBorder: #1976d2;
-    --variant-outlinedBg: rgba(25, 118, 210, 0.04);
+    &.button_primary {
+      --variant-containedBg: #1565c0;
+      --variant-textBg: rgba(25, 118, 210, 0.04);
+      --variant-outlinedBorder: #1976d2;
+      --variant-outlinedBg: rgba(25, 118, 210, 0.04);
+    }
+    &.button_secondary {
+      --variant-containedBg: #7b1fa2;
+      --variant-textBg: rgba(156, 39, 176, 0.04);
+      --variant-outlinedBorder: #9c27b0;
+      --variant-outlinedBg: rgba(156, 39, 176, 0.04);
+    }
+    &.button_success {
+      --variant-containedBg: #1b5e20;
+      --variant-textBg: rgba(46, 125, 50, 0.04);
+      --variant-outlinedBorder: #2e7d32;
+      --variant-outlinedBg: rgba(46, 125, 50, 0.04);
+    }
+    &.button_error {
+      --variant-containedBg: #c62828;
+      --variant-textBg: rgba(211, 47, 47, 0.04);
+      --variant-outlinedBorder: #d32f2f;
+      --variant-outlinedBg: rgba(211, 47, 47, 0.04);
+    }
   }
 
-  &:not(&_outline, &_text) {
+  &:not(&_outlined, &_text) {
     &:active {
       box-shadow:
         0px 5px 5px -3px rgba(0, 0, 0, 0.2),
