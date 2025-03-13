@@ -26,7 +26,7 @@ const TextField = ({
   });
 
   return (
-    <div className={rootClasses}>
+    <div className={rootClasses} data-testid="text-field">
       <div className={classes.textField}>
         <input
           {...props}

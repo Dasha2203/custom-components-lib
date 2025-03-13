@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextField Snapshots Default 1`] = `
+<DocumentFragment>
+  <div
+    class="textFieldRoot"
+    data-testid="text-field"
+  >
+    <div
+      class="textField"
+    >
+      <input
+        class="textField__input"
+      />
+      <label
+        class="textField__label"
+      />
+      <fieldset
+        aria-hidden="true"
+        class="fieldset"
+      >
+        <legend
+          class="fieldset__legend"
+        />
+      </fieldset>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TextField Snapshots TextField with error and helperTExt 1`] = `
+<DocumentFragment>
+  <div
+    class="textFieldRoot textFieldRoot_error textFieldRoot_active"
+    data-testid="text-field"
+  >
+    <div
+      class="textField"
+    >
+      <input
+        class="textField__input textFieldRoot_active"
+        value="Value"
+      />
+      <label
+        class="textField__label"
+      >
+        Label
+      </label>
+      <fieldset
+        aria-hidden="true"
+        class="fieldset"
+      >
+        <legend
+          class="fieldset__legend"
+        >
+          <span>
+            Label
+          </span>
+        </legend>
+      </fieldset>
+    </div>
+    <p
+      class="textFieldRoot__helperText"
+    >
+      Helper text
+    </p>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TextField Snapshots TextField with value and label 1`] = `
+<DocumentFragment>
+  <div
+    class="textFieldRoot textFieldRoot_active"
+    data-testid="text-field"
+  >
+    <div
+      class="textField"
+    >
+      <input
+        class="textField__input textFieldRoot_active"
+        value="Value"
+      />
+      <label
+        class="textField__label"
+      >
+        Label
+      </label>
+      <fieldset
+        aria-hidden="true"
+        class="fieldset"
+      >
+        <legend
+          class="fieldset__legend"
+        >
+          <span>
+            Label
+          </span>
+        </legend>
+      </fieldset>
+    </div>
+  </div>
+</DocumentFragment>
+`;
