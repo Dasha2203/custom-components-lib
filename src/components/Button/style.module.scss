@@ -1,36 +1,4 @@
 .button {
-  &_primary {
-    --variant-textColor: #1976d2;
-    --variant-outlinedColor: #1976d2;
-    --variant-outlinedBorder: rgba(25, 118, 210, 0.5);
-    --variant-containedColor: #fff;
-    --variant-containedBg: #1976d2;
-  }
-
-  &_secondary {
-    --variant-textColor: #9c27b0;
-    --variant-outlinedColor: #9c27b0;
-    --variant-outlinedBorder: rgba(156, 39, 176, 0.5);
-    --variant-containedColor: #fff;
-    --variant-containedBg: #9c27b0;
-  }
-
-  &_success {
-    --variant-textColor: #2e7d32;
-    --variant-outlinedColor: #2e7d32;
-    --variant-outlinedBorder: rgba(46, 125, 50, 0.5);
-    --variant-containedColor: #fff;
-    --variant-containedBg: #2e7d32;
-  }
-
-  &_error {
-    --variant-textColor: #d32f2f;
-    --variant-outlinedColor: #d32f2f;
-    --variant-outlinedBorder: rgba(211, 47, 47, 0.5);
-    --variant-containedColor: #fff;
-    --variant-containedBg: #d32f2f;
-  }
-
   padding: 6px 16px;
 
   position: relative;
@@ -64,6 +32,38 @@
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
+  &_primary {
+    --variant-textColor: #1976d2;
+    --variant-outlinedColor: #1976d2;
+    --variant-outlinedBorder: rgba(25, 118, 210, 0.5);
+    --variant-containedColor: #fff;
+    --variant-containedBg: #1976d2;
+  }
+
+  &_secondary {
+    --variant-textColor: #9c27b0;
+    --variant-outlinedColor: #9c27b0;
+    --variant-outlinedBorder: rgba(156, 39, 176, 0.5);
+    --variant-containedColor: #fff;
+    --variant-containedBg: #9c27b0;
+  }
+
+  &_success {
+    --variant-textColor: #2e7d32;
+    --variant-outlinedColor: #2e7d32;
+    --variant-outlinedBorder: rgba(46, 125, 50, 0.5);
+    --variant-containedColor: #fff;
+    --variant-containedBg: #2e7d32;
+  }
+
+  &_error {
+    --variant-textColor: #d32f2f;
+    --variant-outlinedColor: #d32f2f;
+    --variant-outlinedBorder: rgba(211, 47, 47, 0.5);
+    --variant-containedColor: #fff;
+    --variant-containedBg: #d32f2f;
+  }
 
   &_text {
     color: var(--variant-textColor);
