@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshots of Switch Checked Switch 1`] = `
+<DocumentFragment>
+  <label
+    class="switch switch_checked"
+  >
+    <span
+      class="switch__toggle"
+    >
+      <input
+        checked=""
+        class="switch__input"
+        type="checkbox"
+      />
+      <span
+        class="switch__thumb"
+      />
+    </span>
+    <span
+      class="switch__track"
+    />
+  </label>
+</DocumentFragment>
+`;
+
+exports[`Snapshots of Switch Disabled checked Switch 1`] = `
+<DocumentFragment>
+  <label
+    class="switch switch_checked switch_disabled"
+  >
+    <span
+      class="switch__toggle"
+    >
+      <input
+        checked=""
+        class="switch__input"
+        disabled=""
+        type="checkbox"
+      />
+      <span
+        class="switch__thumb"
+      />
+    </span>
+    <span
+      class="switch__track"
+    />
+  </label>
+</DocumentFragment>
+`;
+
+exports[`Snapshots of Switch Disabled unchecked Switch 1`] = `
+<DocumentFragment>
+  <label
+    class="switch switch_disabled"
+  >
+    <span
+      class="switch__toggle"
+    >
+      <input
+        class="switch__input"
+        disabled=""
+        type="checkbox"
+      />
+      <span
+        class="switch__thumb"
+      />
+    </span>
+    <span
+      class="switch__track"
+    />
+  </label>
+</DocumentFragment>
+`;
+
+exports[`Snapshots of Switch Unchecked Switch 1`] = `
+<DocumentFragment>
+  <label
+    class="switch"
+  >
+    <span
+      class="switch__toggle"
+    >
+      <input
+        class="switch__input"
+        type="checkbox"
+      />
+      <span
+        class="switch__thumb"
+      />
+    </span>
+    <span
+      class="switch__track"
+    />
+  </label>
+</DocumentFragment>
+`;
