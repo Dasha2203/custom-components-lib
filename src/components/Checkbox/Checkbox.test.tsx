@@ -79,3 +79,29 @@ describe('Testing Checkbox component', () => {
     expect(screen.queryByTestId(checkedIconId)).not.toBeNull();
   });
 });
+
+describe('Snapshots of Checkbox', () => {
+  test('Checked Checkbox', () => {
+    const { asFragment } = render(<Checkbox checked={true} />);
+
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  test('Unchecked Checkbox', () => {
+    const { asFragment } = render(<Checkbox checked={false} />);
+
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  test('Should render correctly a disabled and checked checkbox', () => {
+    const { asFragment } = render(<Checkbox checked={true} disabled />);
+
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  test('Should render correctly a disabled and unchecked checkbox', () => {
+    const { asFragment } = render(<Checkbox checked={false} disabled />);
+
+    expect(asFragment()).toMatchSnapshot();
+  });
+});
