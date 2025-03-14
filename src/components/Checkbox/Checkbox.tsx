@@ -40,12 +40,14 @@ const Checkbox = ({
             className={classes.checkbox__icon}
             focusable="false"
             aria-hidden="true"
+            data-testid="checked-icon"
           />
         ) : (
           <UnCheckedIcon
             className={classes.checkbox__icon}
             focusable="false"
             aria-hidden="true"
+            data-testid="unchecked-icon"
           />
         )}
       </span>
