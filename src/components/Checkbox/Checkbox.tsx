@@ -23,6 +23,7 @@ const Checkbox = ({
         className
       )}
       style={style}
+      tabIndex={0}
     >
       <span className={classes.checkbox__wrap}>
         <input
