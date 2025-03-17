@@ -26,7 +26,11 @@ const Modal = ({ open, onClose, children }: ModalProps) => {
 
   return (
     <Portal>
-      <div className={classes.modal} onClick={handleClose}>
+      <div
+        className={classes.modal}
+        onClick={handleClose}
+        data-testid="modal-overlay"
+      >
         <div
           className={classes.modal__content}
           onClick={(e) => e.stopPropagation()}
