@@ -1,4 +1,3 @@
-import React from 'react';
 import clsx from 'clsx';
 import { MenuItemProps } from './types';
 import * as classes from './style.module.scss';

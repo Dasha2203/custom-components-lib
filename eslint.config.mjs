@@ -36,6 +36,9 @@ export default tseslint.config(
       parserOptions: ['tsconfig.json'],
     },
   },
+  pluginJs.configs.recommended,
+  ...tseslint.configs.recommended,
+  eslintPluginReact.configs.flat.recommended,
   {
     rules: {
       'no-console': 'error',
@@ -51,8 +54,5 @@ export default tseslint.config(
       ],
       ...prettierPlugin.rules,
     },
-  },
-  pluginJs.configs.recommended,
-  ...tseslint.configs.recommended,
-  eslintPluginReact.configs.flat.recommended
+  }
 );

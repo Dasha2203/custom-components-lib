@@ -1,7 +1,6 @@
-import * as classes from './style.module.scss';
-import React from 'react';
-import { SwitchProps } from './types';
 import clsx from 'clsx';
+import * as classes from './style.module.scss';
+import { SwitchProps } from './types';
 
 const Switch = ({ checked, disabled, ...props }: SwitchProps) => {
   return (

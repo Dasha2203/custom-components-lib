@@ -1,6 +1,5 @@
-import React from 'react';
-import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import TextField from './TextField';
 
 describe('Testing TextField component', () => {
