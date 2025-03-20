@@ -4,13 +4,13 @@ import { MenuItemProps } from '../MenuItem/types';
 import { DropdownProps } from './types';
 import * as classes from './style.module.scss';
 
-const Dropdown: React.FC<DropdownProps> = ({
+const Dropdown = ({
   isOpen,
   children,
   handleSelect,
   focused,
   selected,
-}) => {
+}: DropdownProps) => {
   const listboxRef = useRef<HTMLUListElement | null>(null);
 
   return (
@@ -21,6 +21,7 @@ const Dropdown: React.FC<DropdownProps> = ({
           role="listbox"
           ref={listboxRef}
           tabIndex={-1}
+          data-testid="select-dropdown"
         >
           {React.Children.map(children, (child, index) => {
             if (

@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select snapshots dropdown list 1`] = `
+<ul
+  class="dropdown"
+  data-testid="select-dropdown"
+  role="listbox"
+  tabindex="-1"
+>
+  <li
+    class="menuItem"
+    role="menuitem"
+    tabindex="-1"
+    value="10"
+  >
+    10
+  </li>
+  <li
+    class="menuItem"
+    role="menuitem"
+    tabindex="-1"
+    value="20"
+  >
+    20
+  </li>
+  <li
+    class="menuItem"
+    role="menuitem"
+    tabindex="-1"
+    value="30"
+  >
+    30
+  </li>
+</ul>
+`;
+
+exports[`Select snapshots select element 1`] = `
+<div
+  class="selectRoot"
+  data-testid="select"
+  tabindex="0"
+>
+  <label
+    class="select__label"
+  >
+    Age
+  </label>
+  <div
+    class="selectRoot__wrap"
+  >
+    <div
+      aria-expanded="false"
+      aria-haspopup="listbox"
+      aria-hidden="true"
+      class="select"
+      role="combobox"
+      tabindex="0"
+    />
+    <input
+      aria-hidden="true"
+      aria-invalid="false"
+      class="select__input"
+      tabindex="-1"
+    />
+    <svg
+      class="select__icon"
+      data-testid="ArrowDropDownIcon"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M7 10l5 5 5-5z"
+      />
+    </svg>
+    <fieldset
+      aria-hidden="true"
+      class="select__fieldset"
+    >
+      <legend
+        class="select__legend"
+      >
+        <span>
+          Age
+        </span>
+      </legend>
+    </fieldset>
+  </div>
+</div>
+`;

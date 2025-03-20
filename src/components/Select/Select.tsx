@@ -114,6 +114,7 @@ const Select = ({
         props.className
       )}
       style={props.style}
+      data-testid={'select'}
     >
       <label className={classes.select__label}>{label}</label>
       <div className={classes.selectRoot__wrap}>
