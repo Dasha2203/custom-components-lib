@@ -3,7 +3,7 @@
 exports[`Snapshots of Switch Checked Switch 1`] = `
 <DocumentFragment>
   <label
-    class="switch switch_checked"
+    class="switch"
   >
     <span
       class="switch__toggle"

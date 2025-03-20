@@ -82,13 +82,13 @@ describe('Testing Checkbox component', () => {
 
 describe('Snapshots of Checkbox', () => {
   test('Checked Checkbox', () => {
-    const { asFragment } = render(<Checkbox checked={true} />);
+    const { asFragment } = render(<Checkbox defaultChecked={true} />);
 
     expect(asFragment()).toMatchSnapshot();
   });
 
   test('Unchecked Checkbox', () => {
-    const { asFragment } = render(<Checkbox checked={false} />);
+    const { asFragment } = render(<Checkbox defaultChecked={false} />);
 
     expect(asFragment()).toMatchSnapshot();
   });

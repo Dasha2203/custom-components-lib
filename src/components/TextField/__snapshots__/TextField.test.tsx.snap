@@ -31,14 +31,14 @@ exports[`TextField Snapshots Default 1`] = `
 exports[`TextField Snapshots TextField with error and helperTExt 1`] = `
 <DocumentFragment>
   <div
-    class="textFieldRoot textFieldRoot_error textFieldRoot_active"
+    class="textFieldRoot textFieldRoot_error"
     data-testid="text-field"
   >
     <div
       class="textField"
     >
       <input
-        class="textField__input textFieldRoot_active"
+        class="textField__input"
         value="Value"
       />
       <label
@@ -71,14 +71,14 @@ exports[`TextField Snapshots TextField with error and helperTExt 1`] = `
 exports[`TextField Snapshots TextField with value and label 1`] = `
 <DocumentFragment>
   <div
-    class="textFieldRoot textFieldRoot_active"
+    class="textFieldRoot"
     data-testid="text-field"
   >
     <div
       class="textField"
     >
       <input
-        class="textField__input textFieldRoot_active"
+        class="textField__input"
         value="Value"
       />
       <label

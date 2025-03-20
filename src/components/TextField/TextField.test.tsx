@@ -11,7 +11,7 @@ describe('Testing TextField component', () => {
 
   test('Should contain value to input', () => {
     const value = 'Some value';
-    render(<TextField type="text" value={value} />);
+    render(<TextField type="text" defaultValue={value} />);
     const input = screen.getByRole('textbox');
 
     expect(input).toBeInTheDocument();
@@ -64,7 +64,7 @@ describe('TextField Snapshots', () => {
 
   test('TextField with value and label', () => {
     const { asFragment } = render(
-      <TextField value={'Value'} label={'Label'} />
+      <TextField defaultValue={'Value'} label={'Label'} />
     );
 
     expect(asFragment()).toMatchSnapshot();
@@ -74,7 +74,7 @@ describe('TextField Snapshots', () => {
     const { asFragment } = render(
       <TextField
         error
-        value={'Value'}
+        defaultValue={'Value'}
         label={'Label'}
         helperText={'Helper text'}
       />

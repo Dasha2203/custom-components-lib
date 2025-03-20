@@ -12,14 +12,14 @@ describe('Testing Switch', () => {
   });
 
   test('Should be checked', () => {
-    render(<Switch checked={true} />);
+    render(<Switch defaultChecked={true} />);
     const switchElement = screen.getByRole('checkbox');
 
     expect(switchElement).toBeChecked();
   });
 
   test('Should be unchecked', () => {
-    render(<Switch checked={false} />);
+    render(<Switch defaultChecked={false} />);
     const switchElement = screen.getByRole('checkbox');
 
     expect(switchElement).not.toBeChecked();
@@ -35,13 +35,13 @@ describe('Testing Switch', () => {
 
 describe('Snapshots of Switch', () => {
   test('Checked Switch', () => {
-    const { asFragment } = render(<Switch checked={true} />);
+    const { asFragment } = render(<Switch defaultChecked={true} />);
 
     expect(asFragment()).toMatchSnapshot();
   });
 
   test('Unchecked Switch', () => {
-    const { asFragment } = render(<Switch checked={false} />);
+    const { asFragment } = render(<Switch defaultChecked={false} />);
 
     expect(asFragment()).toMatchSnapshot();
   });
