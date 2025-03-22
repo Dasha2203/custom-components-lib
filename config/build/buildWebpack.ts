@@ -13,13 +13,18 @@ export function buildWebpack(options: BuildOptions): webpack.Configuration {
     mode: mode ?? 'development',
     entry: paths.entry,
     output: {
+      filename: 'index.js',
       path: paths.output,
-      filename: '[name].[contenthash].js',
-      clean: true,
+      libraryTarget: 'umd',
+      library: 'customComponentsLib',
     },
     resolve: buildResolvers(options),
     module: {
       rules: buildLoaders(options),
+    },
+    externals: {
+      react: 'React',
+      'react-dom': 'react-dom',
     },
     plugins: buildPlugins(options),
     devtool: isDev && 'inline-source-map',

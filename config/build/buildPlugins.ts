@@ -1,5 +1,4 @@
 import webpack, { Configuration, DefinePlugin } from 'webpack';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { BuildOptions } from './types/types';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
@@ -8,7 +7,6 @@ import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 
 export function buildPlugins({
   mode,
-  paths,
   analyzer,
   platform,
 }: BuildOptions): Configuration['plugins'] {
@@ -16,9 +14,6 @@ export function buildPlugins({
   const isProd = mode === 'production';
 
   const plugins: Configuration['plugins'] = [
-    new HtmlWebpackPlugin({
-      template: paths.html,
-    }),
     new DefinePlugin({
       __PLATFORM__: JSON.stringify(platform),
       __ENV__: JSON.stringify(mode),
