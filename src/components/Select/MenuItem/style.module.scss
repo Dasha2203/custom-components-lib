@@ -1,0 +1,31 @@
+.menuItem {
+  position: relative;
+  padding: 6px 16px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 48px;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  color: inherit;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.00938em;
+  white-space: nowrap;
+  -webkit-tap-highlight-color: transparent;
+
+  &:hover:not(.menuItem_selected, .menuItem_focused) {
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+
+  &_focused {
+    background: rgba(224, 224, 224);
+  }
+
+  &_selected {
+    background-color: rgba(25, 118, 210, 0.08);
+  }
+}
