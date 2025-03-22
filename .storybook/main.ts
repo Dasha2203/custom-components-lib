@@ -14,8 +14,16 @@ const config: StorybookConfig = {
     name: '@storybook/react-webpack5',
     options: {},
   },
+  swc: () => ({
+    jsc: {
+      transform: {
+        react: {
+          runtime: 'automatic',
+        },
+      },
+    },
+  }),
   webpackFinal: async (config) => {
-    // Гарантируем, что `module` и `rules` существуют
     config.module = config.module || {};
     config.module.rules = config.module.rules || [];
 
@@ -27,7 +35,7 @@ const config: StorybookConfig = {
     if (config.resolve) {
       config.resolve.alias = {
         ...config.resolve.alias,
-        '@': path.resolve(__dirname, '../src'), // Путь к вашему исходному коду
+        '@': path.resolve(__dirname, '../src'),
       };
     }
 
