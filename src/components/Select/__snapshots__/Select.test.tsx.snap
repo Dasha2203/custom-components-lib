@@ -61,6 +61,7 @@ exports[`Select snapshots select element 1`] = `
       aria-invalid="false"
       class="select__input"
       tabindex="-1"
+      value=""
     />
     <svg
       class="select__icon"

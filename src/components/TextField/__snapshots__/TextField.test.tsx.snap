@@ -11,6 +11,7 @@ exports[`TextField Snapshots Default 1`] = `
     >
       <input
         class="textField__input"
+        value=""
       />
       <label
         class="textField__label"
