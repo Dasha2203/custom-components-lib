@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test button Contained Button snapshot 1`] = `
+<DocumentFragment>
+  <button
+    class="button button_contained button_medium button_primary"
+  >
+    Click me
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Test button Outlined Button snapshot 1`] = `
+<DocumentFragment>
+  <button
+    class="button button_outlined button_medium button_primary"
+  >
+    Click me
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Test button Text Button snapshot 1`] = `
+<DocumentFragment>
+  <button
+    class="button button_text button_medium button_primary"
+  >
+    Click me
+  </button>
+</DocumentFragment>
+`;

@@ -1,0 +1,188 @@
+.textFieldRoot {
+  --error-color: #d32f2f;
+  --primary-color: #1976d2;
+
+  display: inline-flex;
+  flex-direction: column;
+  vertical-align: top;
+
+  .textField {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.4375em;
+    letter-spacing: 0.00938em;
+    color: rgba(0, 0, 0, 0.87);
+    cursor: text;
+    border-radius: 4px;
+
+    &__label {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      padding: 0;
+      display: block;
+      max-width: calc(100% - 24px);
+      color: rgba(0, 0, 0, 0.6);
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.4375em;
+      letter-spacing: 0.00938em;
+      transform-origin: top left;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      transition:
+        color 200ms cubic-bezier(0, 0, 0.2, 1),
+        transform 200ms cubic-bezier(0, 0, 0.2, 1),
+        max-width 200ms cubic-bezier(0, 0, 0.2, 1);
+      pointer-events: none;
+      transform: translate(14px, 16px) scale(1);
+    }
+
+    &__input {
+      margin: 0;
+      padding: 16.5px 14px;
+      height: 1.4375em;
+      width: 100%;
+      font: inherit;
+      letter-spacing: inherit;
+      color: currentColor;
+      border: 0;
+      box-sizing: content-box;
+      background: none;
+      outline: none;
+
+      &:disabled {
+        color: rgba(0, 0, 0, 0.38);
+        & ~ .fieldset {
+          border-color: rgba(0, 0, 0, 0.38);
+        }
+        & ~ .textField__label {
+          color: rgba(0, 0, 0, 0.38);
+        }
+      }
+
+      &:focus {
+        & ~ .fieldset {
+          border-color: var(--primary-color);
+          border-width: 2px;
+        }
+        & ~ .textField__label {
+          color: var(--primary-color);
+        }
+      }
+    }
+
+    &:hover {
+      &:has(.textField__input:not(:focus):not(:disabled)) {
+        .fieldset {
+          border-color: rgba(0, 0, 0, 0.87);
+        }
+      }
+    }
+  }
+
+  &__helperText {
+    margin: 3px 14px 0;
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 1.66;
+    letter-spacing: 0.03333em;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+.textFieldRoot_active {
+  .textField {
+    &__input {
+      & ~ .fieldset .fieldset__legend {
+        max-width: 100%;
+      }
+      .fieldset__legend {
+        max-width: 100%;
+      }
+      & ~ .textField__label {
+        transform: translate(14px, -9px) scale(0.75);
+        transform-origin: top left;
+        pointer-events: auto;
+      }
+    }
+  }
+}
+
+.textFieldRoot_error {
+  .fieldset {
+    border-color: var(--error-color);
+  }
+
+  .textField {
+    &__input {
+      &:focus {
+        & ~ .fieldset {
+          border-color: var(--error-color);
+          border-width: 2px;
+        }
+        & ~ .textField__label {
+          color: var(--error-color);
+          transform: translate(14px, -9px) scale(0.75);
+          transform-origin: top left;
+          pointer-events: auto;
+        }
+      }
+      & ~ .textField__label {
+        color: var(--error-color);
+      }
+    }
+
+    &:hover:has(.textField__input:not(:focus):not(:disabled)) {
+      .fieldset {
+        border-color: var(--error-color);
+      }
+    }
+  }
+
+  .textFieldRoot__helperText {
+    color: var(--error-color);
+  }
+}
+
+.fieldset {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  top: -5px;
+  left: 0;
+  margin: 0;
+  padding: 0 8px;
+  min-width: 0%;
+  text-align: left;
+  pointer-events: none;
+  border-radius: inherit;
+  border-style: solid;
+  border-width: 1px;
+  overflow: hidden;
+  border-color: rgba(0, 0, 0, 0.23);
+
+  &__legend {
+    overflow: hidden;
+    visibility: hidden;
+    padding: 0;
+    display: block;
+    max-width: 0.01px;
+    height: 11px;
+    font-size: 0.75em;
+    white-space: nowrap;
+    transition: max-width 50ms cubic-bezier(0, 0, 0.2, 1);
+    span {
+      padding-inline: 5px;
+      display: inline-block;
+      opacity: 0;
+      visibility: visible;
+    }
+  }
+}

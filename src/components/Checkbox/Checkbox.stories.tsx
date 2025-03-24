@@ -1,0 +1,46 @@
+import type { Meta, StoryObj } from '@storybook/react';
+
+import Checkbox from './Checkbox';
+
+const meta = {
+  title: 'Checkbox',
+  component: Checkbox,
+  tags: ['autodocs'],
+} satisfies Meta<typeof Checkbox>;
+
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+export const OnWithLabel: Story = {
+  args: {
+    checked: true,
+    label: 'Label',
+  },
+};
+
+export const Off: Story = {
+  args: {
+    checked: false,
+  },
+};
+
+export const On: Story = {
+  args: {
+    checked: true,
+  },
+};
+
+export const LockedOn: Story = {
+  args: {
+    checked: true,
+    disabled: true,
+  },
+};
+
+export const LockedOff: Story = {
+  args: {
+    checked: false,
+    disabled: true,
+  },
+};

@@ -3,17 +3,21 @@
     "outDir": "./dist/",
     "noImplicitAny": true,
     "module": "ESNext",
-    "target": "es5",
+    "target": "es6",
     "jsx": "react-jsx",
-    "allowJs": true,
+    "allowJs": false,
     "moduleResolution": "node",
+    "types": ["jest", "node"],
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "declaration": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     }
   },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", "**/*.stories.tsx", "**/*.test.tsx"],
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"

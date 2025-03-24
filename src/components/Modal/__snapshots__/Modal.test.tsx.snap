@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshots of Modal Opened modal 1`] = `
+<div
+  class="modal"
+  data-testid="modal-overlay"
+>
+  <div
+    class="modal__content"
+    tabindex="1"
+  >
+    <p>
+      Modal content
+    </p>
+  </div>
+</div>
+`;

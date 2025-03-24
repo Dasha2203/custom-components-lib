@@ -1,18 +1,9 @@
-import ReactRefreshTypeScript from 'react-refresh-typescript';
+import autoprefixer from 'autoprefixer';
 import { ModuleOptions } from 'webpack';
-import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { BuildOptions } from './types/types';
 
 export function buildLoaders(options: BuildOptions): ModuleOptions['rules'] {
   const isDev = options.mode === 'development';
-
-  // const cssLoaderWithModules = {
-  //   loader: 'css-loader',
-  //   options: {
-  //     modules: true,
-  //     importLoaders: 1,
-  //   },
-  // };
 
   const assetLoader = {
     test: /\.(png|jpg|jpeg|gif)$/i,
@@ -38,12 +29,9 @@ export function buildLoaders(options: BuildOptions): ModuleOptions['rules'] {
   };
 
   const scssLoader = {
-    // test: /\.module\.scss$/,
     test: /\.s[ac]ss$/i,
     use: [
-      // Creates `style` nodes from JS strings
-      isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
-      // Translates CSS into CommonJS
+      'style-loader',
       {
         loader: 'css-loader',
         options: {
@@ -52,22 +40,22 @@ export function buildLoaders(options: BuildOptions): ModuleOptions['rules'] {
           },
         },
       },
-      // Compiles Sass to CSS
+      {
+        loader: 'postcss-loader',
+        options: {
+          postcssOptions: {
+            plugins: [autoprefixer()],
+          },
+        },
+      },
       'sass-loader',
     ],
   };
   const tsLoader = {
-    test: /\.tsx?$/,
-    loader: 'ts-loader',
-    options: {
-      transpileOnly: true,
-      getCustomTransformers: () => ({
-        before: [isDev && ReactRefreshTypeScript()].filter(Boolean),
-      }),
-    },
-    exclude: /node_modules/,
+    test: /\.(ts|tsx)?$/,
+    use: ['ts-loader'],
+    exclude: /node_modules|(\.test\.tsx?$|\.stories\.tsx?$)/,
   };
 
-  // const babelLoader = buildBabelLoader(options);
   return [assetLoader, scssLoader, tsLoader, svgLoader];
 }
